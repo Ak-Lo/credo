@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Pressable, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 const CustomCheckbox = () => {
@@ -7,7 +7,7 @@ const CustomCheckbox = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
+      <Pressable
         style={styles.checkbox}
         onPress={() => setChecked(!checked)}
       >
@@ -16,7 +16,7 @@ const CustomCheckbox = () => {
         ) : (
           <Icon name="square-o" size={25} color="grey" />
         )}
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

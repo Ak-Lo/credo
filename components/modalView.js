@@ -3,7 +3,7 @@ import {
   View,
   Text,
   Modal,
-  TouchableOpacity,
+  Pressable,
   StyleSheet,
   PanResponder,
   TextInput,
@@ -71,14 +71,14 @@ const ModalView = ({ modalVisible, setModalVisible, children, password }) => {
           {/* ///////////////////////////////////// RETRIEVING STORED PASSWORD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/}
 
           <View style={[styles.closeButtonContainer, { top: 10, right: 10 }]}>
-            <TouchableOpacity
+            <Pressable
               onPress={() => setModalVisible(false)}
               style={styles.closeButton}
             >
               <Text style={styles.closeButtonText}>
                 <AntDesign name="close" size={24} color="black" />
               </Text>
-            </TouchableOpacity>
+            </Pressable>
           </View>
 
           <View style={styles.line}></View>
@@ -96,9 +96,9 @@ const ModalView = ({ modalVisible, setModalVisible, children, password }) => {
                 setModalVisible={setModalVisible}
               />
               <Text style={styles.text}>არ მიგიღიათ კოდი?</Text>
-              <TouchableOpacity style={styles.button}>
+              <Pressable style={styles.button}>
                 <Text style={styles.buttonText}>გაგრძელება</Text>
-              </TouchableOpacity>
+              </Pressable>
             </View>
           </View>
           {children}
