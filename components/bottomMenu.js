@@ -42,7 +42,6 @@ function BottomMenu() {
               <MaterialIcons
                 name="straighten"
                 size={20}
-                backgroundColor={'red'}
                 color={focused ? "#FF5733" : "black"}
               />
             ),
